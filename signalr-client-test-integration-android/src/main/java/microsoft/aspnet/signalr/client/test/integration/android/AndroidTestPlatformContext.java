@@ -28,6 +28,8 @@ import microsoft.aspnet.signalr.client.test.integration.framework.TestResult;
 public class AndroidTestPlatformContext implements TestPlatformContext {
 
     private static Activity mActivity;
+
+    private static String TAG = "SignalR-Integration-Test";
     
     public AndroidTestPlatformContext(Activity activity) {
         mActivity = activity;
@@ -40,7 +42,7 @@ public class AndroidTestPlatformContext implements TestPlatformContext {
             
             @Override
             public void log(String message, LogLevel level) {
-                Log.d("SignalR-Integration-Test", level.toString() + ": " + message);
+                Log.d(TAG, level.toString() + ": " + message);
             }
         };
     }
