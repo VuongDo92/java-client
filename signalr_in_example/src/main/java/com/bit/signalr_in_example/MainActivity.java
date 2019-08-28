@@ -14,7 +14,6 @@ import microsoft.aspnet.signalr.client.http.android.AndroidPlatformComponent;
 import microsoft.aspnet.signalr.client.hubs.HubConnection;
 import microsoft.aspnet.signalr.client.hubs.HubProxy;
 import microsoft.aspnet.signalr.client.hubs.SubscriptionHandler1;
-import microsoft.aspnet.signalr.client.hubs.SubscriptionHandler3;
 import microsoft.aspnet.signalr.client.transport.ClientTransport;
 import microsoft.aspnet.signalr.client.transport.ServerSentEventsTransport;
 
@@ -95,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
         /**
          * PUSH DATA TO SERVER
          * */
-//        mHubProxy.invoke("send", name, message, time);
+//        hub.server.invoke('SubscribeToSummaryDeltas')
+        mHubProxy.invoke("SubscribeToSummaryDeltas");
 
         setContentView(R.layout.activity_main);
     }

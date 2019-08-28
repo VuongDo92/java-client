@@ -34,6 +34,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation project(':signalr-client-sdk-android')
-    implementation project(':signalr-client-sdk')
+    implementation files('libs/signalr-client-sdk.jar')
+    implementation files('libs/signalr-client-sdk-android-release.aar')
 }
